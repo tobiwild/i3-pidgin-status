@@ -1,0 +1,453 @@
+# carton snapshot format: version 1.0
+DISTRIBUTIONS
+  AnyEvent-7.05
+    pathname: M/ML/MLEHMANN/AnyEvent-7.05.tar.gz
+    provides:
+      AE undef
+      AE::Log::COLLECT undef
+      AE::Log::FILTER undef
+      AE::Log::LOG undef
+      AnyEvent 7.05
+      AnyEvent::Base 7.05
+      AnyEvent::CondVar 7.05
+      AnyEvent::CondVar::Base 7.05
+      AnyEvent::DNS undef
+      AnyEvent::Debug undef
+      AnyEvent::Debug::Backtrace undef
+      AnyEvent::Debug::Wrap undef
+      AnyEvent::Debug::Wrapped undef
+      AnyEvent::Debug::shell undef
+      AnyEvent::Handle undef
+      AnyEvent::IO undef
+      AnyEvent::IO::IOAIO undef
+      AnyEvent::IO::Perl undef
+      AnyEvent::Impl::Cocoa undef
+      AnyEvent::Impl::EV undef
+      AnyEvent::Impl::Event undef
+      AnyEvent::Impl::EventLib undef
+      AnyEvent::Impl::FLTK undef
+      AnyEvent::Impl::Glib undef
+      AnyEvent::Impl::IOAsync undef
+      AnyEvent::Impl::Irssi undef
+      AnyEvent::Impl::POE undef
+      AnyEvent::Impl::Perl undef
+      AnyEvent::Impl::Qt undef
+      AnyEvent::Impl::Qt::Io undef
+      AnyEvent::Impl::Qt::Timer undef
+      AnyEvent::Impl::Tk undef
+      AnyEvent::Log undef
+      AnyEvent::Log::COLLECT undef
+      AnyEvent::Log::Ctx undef
+      AnyEvent::Log::FILTER undef
+      AnyEvent::Log::LOG undef
+      AnyEvent::Loop undef
+      AnyEvent::Socket undef
+      AnyEvent::Strict undef
+      AnyEvent::TLS undef
+      AnyEvent::Util undef
+    requirements:
+      ExtUtils::MakeMaker 0
+  AnyEvent-DBus-0.31
+    pathname: M/ML/MLEHMANN/AnyEvent-DBus-0.31.tar.gz
+    provides:
+      AnyEvent::DBus 0.31
+    requirements:
+      AnyEvent 5
+      ExtUtils::MakeMaker 0
+      Net::DBus 0.33
+      common::sense 3.2
+  Digest-SHA1-2.13
+    pathname: G/GA/GAAS/Digest-SHA1-2.13.tar.gz
+    provides:
+      Digest::SHA1 2.13
+    requirements:
+      Digest::base 1.00
+      ExtUtils::MakeMaker 0
+      perl 5.004
+  Encode-Locale-1.03
+    pathname: G/GA/GAAS/Encode-Locale-1.03.tar.gz
+    provides:
+      Encode::Locale 1.03
+    requirements:
+      Encode 2
+      Encode::Alias 0
+      ExtUtils::MakeMaker 0
+      Test 0
+      perl 5.008
+  File-Listing-6.04
+    pathname: G/GA/GAAS/File-Listing-6.04.tar.gz
+    provides:
+      File::Listing 6.04
+      File::Listing::apache 6.04
+      File::Listing::dosftp 6.04
+      File::Listing::netware 6.04
+      File::Listing::unix 6.04
+      File::Listing::vms 6.04
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTTP::Date 6
+      perl 5.006002
+  HTML-Parser-3.71
+    pathname: G/GA/GAAS/HTML-Parser-3.71.tar.gz
+    provides:
+      HTML::Entities 3.69
+      HTML::Filter 3.57
+      HTML::HeadParser 3.71
+      HTML::LinkExtor 3.69
+      HTML::Parser 3.71
+      HTML::PullParser 3.57
+      HTML::TokeParser 3.69
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTML::Tagset 3
+      XSLoader 0
+      perl 5.008
+  HTML-Tagset-3.20
+    pathname: P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
+    provides:
+      HTML::Tagset 3.20
+    requirements:
+      ExtUtils::MakeMaker 0
+  HTTP-Cookies-6.01
+    pathname: G/GA/GAAS/HTTP-Cookies-6.01.tar.gz
+    provides:
+      HTTP::Cookies 6.01
+      HTTP::Cookies::Microsoft 6.00
+      HTTP::Cookies::Netscape 6.00
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTTP::Date 6
+      HTTP::Headers::Util 6
+      Time::Local 0
+      perl 5.008001
+  HTTP-Daemon-6.01
+    pathname: G/GA/GAAS/HTTP-Daemon-6.01.tar.gz
+    provides:
+      HTTP::Daemon 6.01
+      HTTP::Daemon::ClientConn 6.01
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTTP::Date 6
+      HTTP::Request 6
+      HTTP::Response 6
+      HTTP::Status 6
+      IO::Socket 0
+      LWP::MediaTypes 6
+      Sys::Hostname 0
+      perl 5.008001
+  HTTP-Date-6.02
+    pathname: G/GA/GAAS/HTTP-Date-6.02.tar.gz
+    provides:
+      HTTP::Date 6.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      Time::Local 0
+      perl 5.006002
+  HTTP-Message-6.06
+    pathname: G/GA/GAAS/HTTP-Message-6.06.tar.gz
+    provides:
+      HTTP::Config 6.00
+      HTTP::Headers 6.05
+      HTTP::Headers::Auth 6.00
+      HTTP::Headers::ETag 6.00
+      HTTP::Headers::Util 6.03
+      HTTP::Message 6.06
+      HTTP::Request 6.00
+      HTTP::Request::Common 6.04
+      HTTP::Response 6.04
+      HTTP::Status 6.03
+    requirements:
+      Compress::Raw::Zlib 0
+      Encode 2.21
+      Encode::Locale 1
+      ExtUtils::MakeMaker 0
+      HTTP::Date 6
+      IO::Compress::Bzip2 2.021
+      IO::Compress::Deflate 0
+      IO::Compress::Gzip 0
+      IO::HTML 0
+      IO::Uncompress::Bunzip2 2.021
+      IO::Uncompress::Gunzip 0
+      IO::Uncompress::Inflate 0
+      IO::Uncompress::RawInflate 0
+      LWP::MediaTypes 6
+      MIME::Base64 2.1
+      MIME::QuotedPrint 0
+      URI 1.10
+      perl 5.008001
+  HTTP-Negotiate-6.01
+    pathname: G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
+    provides:
+      HTTP::Negotiate 6.01
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTTP::Headers 6
+      perl 5.008001
+  IO-HTML-1.00
+    pathname: C/CJ/CJM/IO-HTML-1.00.tar.gz
+    provides:
+      IO::HTML 1.00
+    requirements:
+      Carp 0
+      Encode 2.10
+      Exporter 5.57
+      ExtUtils::MakeMaker 6.30
+      File::Temp 0
+      Scalar::Util 0
+      Test::More 0.88
+  JSON-2.90
+    pathname: M/MA/MAKAMAKA/JSON-2.90.tar.gz
+    provides:
+      JSON 2.90
+      JSON::Backend::PP 2.90
+      JSON::Boolean 2.90
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+  LWP-MediaTypes-6.02
+    pathname: G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz
+    provides:
+      LWP::MediaTypes 6.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.006002
+  Net-DBus-1.0.0
+    pathname: D/DA/DANBERR/Net-DBus-1.0.0.tar.gz
+    provides:
+      Net::DBus 1.0
+      Net::DBus::ASyncReply undef
+      Net::DBus::Annotation undef
+      Net::DBus::Binding::Bus undef
+      Net::DBus::Binding::Connection undef
+      Net::DBus::Binding::Introspector undef
+      Net::DBus::Binding::Iterator undef
+      Net::DBus::Binding::Message undef
+      Net::DBus::Binding::Message::Error undef
+      Net::DBus::Binding::Message::MethodCall undef
+      Net::DBus::Binding::Message::MethodReturn undef
+      Net::DBus::Binding::Message::Signal undef
+      Net::DBus::Binding::PendingCall undef
+      Net::DBus::Binding::Server undef
+      Net::DBus::Binding::Value undef
+      Net::DBus::Binding::Watch undef
+      Net::DBus::Callback undef
+      Net::DBus::Dumper undef
+      Net::DBus::Error undef
+      Net::DBus::Exporter undef
+      Net::DBus::Object undef
+      Net::DBus::Reactor undef
+      Net::DBus::RemoteObject undef
+      Net::DBus::RemoteService undef
+      Net::DBus::Service undef
+      Net::DBus::Test::MockConnection undef
+      Net::DBus::Test::MockIterator undef
+      Net::DBus::Test::MockMessage undef
+      Net::DBus::Test::MockObject undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      Time::HiRes 0
+      XML::Twig 0
+  Net-HTTP-6.06
+    pathname: G/GA/GAAS/Net-HTTP-6.06.tar.gz
+    provides:
+      Net::HTTP 6.06
+      Net::HTTP::Methods 6.06
+      Net::HTTP::NB 6.04
+      Net::HTTPS 6.04
+    requirements:
+      Compress::Raw::Zlib 0
+      ExtUtils::MakeMaker 0
+      IO::Compress::Gzip 0
+      IO::Select 0
+      IO::Socket::INET 0
+      perl 5.006002
+  URI-1.60
+    pathname: G/GA/GAAS/URI-1.60.tar.gz
+    provides:
+      URI 1.60
+      URI::Escape 3.31
+      URI::Heuristic 4.20
+      URI::IRI undef
+      URI::QueryParam undef
+      URI::Split undef
+      URI::URL 5.04
+      URI::WithBase 2.20
+      URI::_foreign undef
+      URI::_generic undef
+      URI::_idna undef
+      URI::_ldap 1.12
+      URI::_login undef
+      URI::_punycode 0.04
+      URI::_query undef
+      URI::_segment undef
+      URI::_server undef
+      URI::_userpass undef
+      URI::data undef
+      URI::file 4.21
+      URI::file::Base undef
+      URI::file::FAT undef
+      URI::file::Mac undef
+      URI::file::OS2 undef
+      URI::file::QNX undef
+      URI::file::Unix undef
+      URI::file::Win32 undef
+      URI::ftp undef
+      URI::gopher undef
+      URI::http undef
+      URI::https undef
+      URI::ldap 1.12
+      URI::ldapi undef
+      URI::ldaps undef
+      URI::mailto undef
+      URI::mms undef
+      URI::news undef
+      URI::nntp undef
+      URI::pop undef
+      URI::rlogin undef
+      URI::rsync undef
+      URI::rtsp undef
+      URI::rtspu undef
+      URI::sip 0.11
+      URI::sips undef
+      URI::snews undef
+      URI::ssh undef
+      URI::telnet undef
+      URI::tn3270 undef
+      URI::urn undef
+      URI::urn::isbn undef
+      URI::urn::oid undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      MIME::Base64 2
+      Test 0
+      Test::More 0
+      perl 5.008001
+  WWW-RobotRules-6.02
+    pathname: G/GA/GAAS/WWW-RobotRules-6.02.tar.gz
+    provides:
+      WWW::RobotRules 6.02
+      WWW::RobotRules::AnyDBM_File 6.00
+      WWW::RobotRules::InCore 6.02
+    requirements:
+      AnyDBM_File 0
+      ExtUtils::MakeMaker 0
+      Fcntl 0
+      URI 1.10
+      perl 5.008001
+  XML-Parser-2.41
+    pathname: T/TO/TODDR/XML-Parser-2.41.tar.gz
+    provides:
+      XML::Parser 2.41
+      XML::Parser::Expat 2.41
+      XML::Parser::Style::Debug undef
+      XML::Parser::Style::Objects undef
+      XML::Parser::Style::Stream undef
+      XML::Parser::Style::Subs undef
+      XML::Parser::Style::Tree undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      LWP 0
+      perl 5.00405
+  XML-Twig-3.44
+    pathname: M/MI/MIROD/XML-Twig-3.44.tar.gz
+    provides:
+      XML::Twig 3.44
+      XML::Twig::Elt 3.44
+      XML::Twig::Entity 3.44
+      XML::Twig::Entity_list 3.44
+      XML::Twig::XPath 0.02
+      XML::Twig::XPath::Attribute 0.02
+      XML::Twig::XPath::Elt 0.02
+      XML::Twig::XPath::Namespace 0.02
+      XML::XPath::NodeSet 0.02
+      XML::XPathEngine::NodeSet 0.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      XML::Parser 2.23
+  common-sense-3.72
+    pathname: M/ML/MLEHMANN/common-sense-3.72.tar.gz
+    provides:
+      common::sense 3.72
+    requirements:
+      ExtUtils::MakeMaker 0
+  libwww-perl-6.05
+    pathname: G/GA/GAAS/libwww-perl-6.05.tar.gz
+    provides:
+      LWP 6.05
+      LWP::Authen::Basic undef
+      LWP::Authen::Digest undef
+      LWP::Authen::Ntlm 6.00
+      LWP::ConnCache 6.02
+      LWP::Debug undef
+      LWP::DebugFile undef
+      LWP::MemberMixin undef
+      LWP::Protocol 6.00
+      LWP::Protocol::GHTTP undef
+      LWP::Protocol::MyFTP undef
+      LWP::Protocol::cpan undef
+      LWP::Protocol::data undef
+      LWP::Protocol::file undef
+      LWP::Protocol::ftp undef
+      LWP::Protocol::gopher undef
+      LWP::Protocol::http undef
+      LWP::Protocol::http::Socket undef
+      LWP::Protocol::http::SocketMethods undef
+      LWP::Protocol::loopback undef
+      LWP::Protocol::mailto undef
+      LWP::Protocol::nntp undef
+      LWP::Protocol::nogo undef
+      LWP::RobotUA 6.03
+      LWP::Simple 6.00
+      LWP::UserAgent 6.05
+    requirements:
+      Digest::MD5 0
+      Encode 2.12
+      Encode::Locale 0
+      ExtUtils::MakeMaker 0
+      File::Listing 6
+      HTML::Entities 0
+      HTML::HeadParser 0
+      HTTP::Cookies 6
+      HTTP::Daemon 6
+      HTTP::Date 6
+      HTTP::Negotiate 6
+      HTTP::Request 6
+      HTTP::Request::Common 6
+      HTTP::Response 6
+      HTTP::Status 6
+      IO::Select 0
+      IO::Socket 0
+      LWP::MediaTypes 6
+      MIME::Base64 2.1
+      Net::FTP 2.58
+      Net::HTTP 6.04
+      URI 1.10
+      URI::Escape 0
+      WWW::RobotRules 6
+      perl 5.008001
+  protocol-websocket-0.15
+    pathname: V/VT/VTI/protocol-websocket-0.15.tar.gz
+    provides:
+      Protocol::WebSocket 0.15
+      Protocol::WebSocket::Cookie undef
+      Protocol::WebSocket::Cookie::Request undef
+      Protocol::WebSocket::Cookie::Response undef
+      Protocol::WebSocket::Frame undef
+      Protocol::WebSocket::Handshake undef
+      Protocol::WebSocket::Handshake::Client undef
+      Protocol::WebSocket::Handshake::Server undef
+      Protocol::WebSocket::Message undef
+      Protocol::WebSocket::Request undef
+      Protocol::WebSocket::Response undef
+      Protocol::WebSocket::Stateful undef
+      Protocol::WebSocket::URL undef
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Carp 0
+      Digest::MD5 0
+      Digest::SHA1 0
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Scalar::Util 0
