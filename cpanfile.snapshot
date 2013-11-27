@@ -112,6 +112,12 @@ DISTRIBUTIONS
       HTML::Tagset 3
       XSLoader 0
       perl 5.008
+  HTML-Strip-1.06
+    pathname: K/KI/KILINRAX/HTML-Strip-1.06.tar.gz
+    provides:
+      HTML::Strip 1.06
+    requirements:
+      ExtUtils::MakeMaker 0
   HTML-Tagset-3.20
     pathname: P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
     provides:

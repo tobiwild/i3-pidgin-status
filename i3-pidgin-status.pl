@@ -1,26 +1,42 @@
 #!/usr/bin/env perl
+use FindBin qw($RealBin);
+use lib "$RealBin/local/lib/perl5";
 
 use strict;
-use Data::Dumper;
 use AnyEvent::DBus;
 use AnyEvent::I3;
 use List::Util qw/first/;
 use JSON;
-use Encode;
+use HTML::Strip;
 
 $| = 1;
 
+my $pidgin_ws = 'pidgin';
+my $max_text_length = 150;
+my $timer_interval = 7;
+
 my $cv = AnyEvent->condvar;
 my $list = MessageList->new;
-my $pidgin_ws = 'pidgin';
 my $i3 = i3();
 my $pidgin_ws_active;
+my $dbus_service;
 $i3->connect->recv or die 'could not connect to i3';
+my $dbus = Net::DBus->find;
+my $timer;
 
 sub get_msg_line {    
     my %data = @_;
 
-    sprintf('%s: %s', $data{user}, $data{msg});
+    my $result;
+    my $hs = HTML::Strip->new();
+
+    my $msg = $hs->parse( $data{msg} );
+    $hs->eof;
+
+    $result = sprintf('%s: %s', $data{user}, $msg);
+    $result = substr($result, 0, $max_text_length);
+
+    return $result;
 }
 
 sub print_msg {
@@ -35,15 +51,16 @@ my $w; $w = AnyEvent->io (fh => \*STDIN, poll => 'r', cb => sub {
 });
 
 sub create_timer {
-    my $interval = 5;
+    AnyEvent->timer (after => $timer_interval, interval => $timer_interval, cb => sub {
+        if (! $dbus_service) {
+            eval { $dbus_service = connect_to_pidgin(); }
+        }
 
-    AnyEvent->timer (after => $interval, interval => $interval, cb => sub {
         $list->forward;
         print_msg $list->get_line;
     });
 }
 
-my $timer = create_timer();
 
 sub add_pidgin_msg {
 
@@ -75,15 +92,20 @@ $i3->subscribe({
     }
 });
 
-my $bus     = Net::DBus->find;
-my $service = $bus->get_service("im.pidgin.purple.PurpleService");
-my $object  = $service->get_object("/im/pidgin/purple/PurpleObject");
+sub connect_to_pidgin {
+    my $service = $dbus->get_service("im.pidgin.purple.PurpleService");
+    my $object  = $service->get_object("/im/pidgin/purple/PurpleObject");
 
-$object->connect_to_signal('ReceivedChatMsg', \&add_pidgin_msg);
-$object->connect_to_signal('ReceivedImMsg', \&add_pidgin_msg);
+    $object->connect_to_signal('ReceivedChatMsg', \&add_pidgin_msg);
+    $object->connect_to_signal('ReceivedImMsg', \&add_pidgin_msg);
+    
+    return $service;
+}
 
+eval { $dbus_service = connect_to_pidgin() };
 my $ws = $i3->get_workspaces->recv;
 $pidgin_ws_active = !! first { $_->{focused} && index($_->{name}, $pidgin_ws) > -1 } @$ws;
+$timer = create_timer();
 
 $cv->recv;
 
