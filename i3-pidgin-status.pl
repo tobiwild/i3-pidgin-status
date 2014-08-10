@@ -3,13 +3,13 @@ use FindBin qw($RealBin);
 use lib "$RealBin/local/lib/perl5";
 
 use strict;
+$| = 1;
+
 use AnyEvent::DBus;
 use AnyEvent::I3;
 use List::Util qw/first/;
 use JSON;
 use HTML::Strip;
-
-$| = 1;
 
 my $pidgin_ws = 'pidgin';
 my $max_text_length = 150;
@@ -43,13 +43,6 @@ sub print_msg {
     print shift . "\n";
 }
 
-my $w; $w = AnyEvent->io (fh => \*STDIN, poll => 'r', cb => sub {
-     chomp (my $input = <STDIN>);
-     
-     $list->forward;
-     print_msg $list->get_line;
-});
-
 sub create_timer {
     AnyEvent->timer (after => $timer_interval, interval => $timer_interval, cb => sub {
         if (! $dbus_service) {
@@ -60,7 +53,6 @@ sub create_timer {
         print_msg $list->get_line;
     });
 }
-
 
 sub add_pidgin_msg {
 
@@ -84,10 +76,15 @@ $i3->subscribe({
     workspace => sub {
         my $ev = shift;
 
-        $pidgin_ws_active = $ev->{change} eq 'focus' && index($ev->{current}->{name}, $pidgin_ws) > -1;
+        if ($ev->{change} ne 'focus') {
+            return;
+        }
+
+        $pidgin_ws_active = index($ev->{current}->{name}, $pidgin_ws) > -1;
 
         if ($pidgin_ws_active) {
-            $list->clear;    
+            $list->clear;
+            print_msg '';
         }
     }
 });

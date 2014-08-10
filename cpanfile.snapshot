@@ -1,16 +1,16 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
-  AnyEvent-7.05
-    pathname: M/ML/MLEHMANN/AnyEvent-7.05.tar.gz
+  AnyEvent-7.07
+    pathname: M/ML/MLEHMANN/AnyEvent-7.07.tar.gz
     provides:
       AE undef
       AE::Log::COLLECT undef
       AE::Log::FILTER undef
       AE::Log::LOG undef
-      AnyEvent 7.05
-      AnyEvent::Base 7.05
-      AnyEvent::CondVar 7.05
-      AnyEvent::CondVar::Base 7.05
+      AnyEvent 7.07
+      AnyEvent::Base 7.07
+      AnyEvent::CondVar 7.07
+      AnyEvent::CondVar::Base 7.07
       AnyEvent::DNS undef
       AnyEvent::Debug undef
       AnyEvent::Debug::Backtrace undef
@@ -66,14 +66,6 @@ DISTRIBUTIONS
       AnyEvent::Socket 0
       ExtUtils::MakeMaker 6.36
       JSON::XS 0
-  Digest-SHA1-2.13
-    pathname: G/GA/GAAS/Digest-SHA1-2.13.tar.gz
-    provides:
-      Digest::SHA1 2.13
-    requirements:
-      Digest::base 1.00
-      ExtUtils::MakeMaker 0
-      perl 5.004
   Encode-Locale-1.03
     pathname: G/GA/GAAS/Encode-Locale-1.03.tar.gz
     provides:
@@ -199,18 +191,15 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       HTTP::Headers 6
       perl 5.008001
-  IO-HTML-1.00
-    pathname: C/CJ/CJM/IO-HTML-1.00.tar.gz
+  IO-HTML-1.001
+    pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
     provides:
-      IO::HTML 1.00
+      IO::HTML 1.001
     requirements:
       Carp 0
       Encode 2.10
       Exporter 5.57
       ExtUtils::MakeMaker 6.30
-      File::Temp 0
-      Scalar::Util 0
-      Test::More 0.88
   JSON-2.90
     pathname: M/MA/MAKAMAKA/JSON-2.90.tar.gz
     provides:
@@ -272,11 +261,11 @@ DISTRIBUTIONS
       Test::More 0
       Time::HiRes 0
       XML::Twig 0
-  Net-HTTP-6.06
-    pathname: G/GA/GAAS/Net-HTTP-6.06.tar.gz
+  Net-HTTP-6.07
+    pathname: M/MS/MSCHILLI/Net-HTTP-6.07.tar.gz
     provides:
-      Net::HTTP 6.06
-      Net::HTTP::Methods 6.06
+      Net::HTTP 6.07
+      Net::HTTP::Methods 6.07
       Net::HTTP::NB 6.04
       Net::HTTPS 6.04
     requirements:
@@ -285,21 +274,22 @@ DISTRIBUTIONS
       IO::Compress::Gzip 0
       IO::Select 0
       IO::Socket::INET 0
+      URI 0
       perl 5.006002
-  Types-Serialiser-0.03
-    pathname: M/ML/MLEHMANN/Types-Serialiser-0.03.tar.gz
+  Types-Serialiser-1.0
+    pathname: M/ML/MLEHMANN/Types-Serialiser-1.0.tar.gz
     provides:
-      JSON::PP::Boolean 0.03
-      Types::Serialiser 0.03
-      Types::Serialiser::BooleanBase 0.03
-      Types::Serialiser::Error 0.03
+      JSON::PP::Boolean 1.0
+      Types::Serialiser 1.0
+      Types::Serialiser::BooleanBase 1.0
+      Types::Serialiser::Error 1.0
     requirements:
       ExtUtils::MakeMaker 0
       common::sense 0
-  URI-1.60
-    pathname: G/GA/GAAS/URI-1.60.tar.gz
+  URI-1.64
+    pathname: E/ET/ETHER/URI-1.64.tar.gz
     provides:
-      URI 1.60
+      URI 1.64
       URI::Escape 3.31
       URI::Heuristic 4.20
       URI::IRI undef
@@ -310,14 +300,14 @@ DISTRIBUTIONS
       URI::_foreign undef
       URI::_generic undef
       URI::_idna undef
-      URI::_ldap 1.12
+      URI::_ldap 1.64
       URI::_login undef
-      URI::_punycode 0.04
+      URI::_punycode 1.64
       URI::_query undef
       URI::_segment undef
       URI::_server undef
       URI::_userpass undef
-      URI::data undef
+      URI::data 1.64
       URI::file 4.21
       URI::file::Base undef
       URI::file::FAT undef
@@ -330,7 +320,7 @@ DISTRIBUTIONS
       URI::gopher undef
       URI::http undef
       URI::https undef
-      URI::ldap 1.12
+      URI::ldap 1.64
       URI::ldapi undef
       URI::ldaps undef
       URI::mailto undef
@@ -342,7 +332,7 @@ DISTRIBUTIONS
       URI::rsync undef
       URI::rtsp undef
       URI::rtspu undef
-      URI::sip 0.11
+      URI::sip 1.64
       URI::sips undef
       URI::snews undef
       URI::ssh undef
@@ -352,11 +342,12 @@ DISTRIBUTIONS
       URI::urn::isbn undef
       URI::urn::oid undef
     requirements:
+      Exporter 5.57
       ExtUtils::MakeMaker 0
       MIME::Base64 2
-      Test 0
-      Test::More 0
+      parent 0
       perl 5.008001
+      utf8 0
   WWW-RobotRules-6.02
     pathname: G/GA/GAAS/WWW-RobotRules-6.02.tar.gz
     provides:
@@ -383,13 +374,13 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       LWP 0
       perl 5.00405
-  XML-Twig-3.44
-    pathname: M/MI/MIROD/XML-Twig-3.44.tar.gz
+  XML-Twig-3.48
+    pathname: M/MI/MIROD/XML-Twig-3.48.tar.gz
     provides:
-      XML::Twig 3.44
-      XML::Twig::Elt 3.44
-      XML::Twig::Entity 3.44
-      XML::Twig::Entity_list 3.44
+      XML::Twig 3.48
+      XML::Twig::Elt 3.48
+      XML::Twig::Entity 3.48
+      XML::Twig::Entity_list 3.48
       XML::Twig::XPath 0.02
       XML::Twig::XPath::Attribute 0.02
       XML::Twig::XPath::Elt 0.02
@@ -399,16 +390,16 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       XML::Parser 2.23
-  common-sense-3.72
-    pathname: M/ML/MLEHMANN/common-sense-3.72.tar.gz
+  common-sense-3.73
+    pathname: M/ML/MLEHMANN/common-sense-3.73.tar.gz
     provides:
-      common::sense 3.72
+      common::sense 3.73
     requirements:
       ExtUtils::MakeMaker 0
-  libwww-perl-6.05
-    pathname: G/GA/GAAS/libwww-perl-6.05.tar.gz
+  libwww-perl-6.08
+    pathname: M/MS/MSCHILLI/libwww-perl-6.08.tar.gz
     provides:
-      LWP 6.05
+      LWP 6.08
       LWP::Authen::Basic undef
       LWP::Authen::Digest undef
       LWP::Authen::Ntlm 6.00
@@ -416,7 +407,7 @@ DISTRIBUTIONS
       LWP::Debug undef
       LWP::DebugFile undef
       LWP::MemberMixin undef
-      LWP::Protocol 6.00
+      LWP::Protocol 6.06
       LWP::Protocol::GHTTP undef
       LWP::Protocol::MyFTP undef
       LWP::Protocol::cpan undef
@@ -431,9 +422,9 @@ DISTRIBUTIONS
       LWP::Protocol::mailto undef
       LWP::Protocol::nntp undef
       LWP::Protocol::nogo undef
-      LWP::RobotUA 6.03
+      LWP::RobotUA 6.06
       LWP::Simple 6.00
-      LWP::UserAgent 6.05
+      LWP::UserAgent 6.06
     requirements:
       Digest::MD5 0
       Encode 2.12
@@ -455,33 +446,8 @@ DISTRIBUTIONS
       LWP::MediaTypes 6
       MIME::Base64 2.1
       Net::FTP 2.58
-      Net::HTTP 6.04
+      Net::HTTP 6.07
       URI 1.10
       URI::Escape 0
       WWW::RobotRules 6
       perl 5.008001
-  protocol-websocket-0.15
-    pathname: V/VT/VTI/protocol-websocket-0.15.tar.gz
-    provides:
-      Protocol::WebSocket 0.15
-      Protocol::WebSocket::Cookie undef
-      Protocol::WebSocket::Cookie::Request undef
-      Protocol::WebSocket::Cookie::Response undef
-      Protocol::WebSocket::Frame undef
-      Protocol::WebSocket::Handshake undef
-      Protocol::WebSocket::Handshake::Client undef
-      Protocol::WebSocket::Handshake::Server undef
-      Protocol::WebSocket::Message undef
-      Protocol::WebSocket::Request undef
-      Protocol::WebSocket::Response undef
-      Protocol::WebSocket::Stateful undef
-      Protocol::WebSocket::URL undef
-    requirements:
-      CPAN::Meta 0
-      CPAN::Meta::Prereqs 0
-      Carp 0
-      Digest::MD5 0
-      Digest::SHA1 0
-      ExtUtils::CBuilder 0
-      Module::Build 0.38
-      Scalar::Util 0
